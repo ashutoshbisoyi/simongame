@@ -5,21 +5,27 @@
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="animate.css">
 	<title>The Simon Game</title>
 </head>
 <body>
-	<h1>Press <i class="far fa-dot-circle"></i> to Start the Game</h1>
+	<audio src="sounds/landing.mp3" id="landing-sound-id" preload="auto"></audio>
+	<h1 class="wow slideInDown">Press <i class="far fa-dot-circle"></i> to Start the Game</h1>
 	<div class="table-div">
-		<button id="start-btn"><i class="far fa-dot-circle fa-5x" id="start-button"></i></button>
+		<button id="start-btn"><i class="far fa-dot-circle fa-5x wow rollIn" data-wow-delay="1s" id="start-button"></i></button>
 		<table cellspacing="50">
-			<tr> <td><button class="box" id="green"></button></td> <td><button class="box" id="red"></button></td></tr>
-			<tr> <td><button class="box" id="yellow"></button></td> <td><button class="box" id="blue"></button></td></tr>
+			<tr> <td><button class="box wow slideInLeft" id="green"></button></td> <td><button class="box wow slideInRight" id="red"></button></td></tr>
+			<tr> <td><button class="box wow slideInLeft" id="yellow"></button></td> <td><button class="box wow slideInRight" id="blue"></button></td></tr>
 		</table>
-		<center><a href="help.html"><button id="help" class="footer-elements">Help!</button></a></center>
-		<p id="footer" class="footer-elements">made with ❤️ by @ashutoshbiosyi</p>
+		<center><a href="help.html"><button id="help" class="footer-elements wow fadeIn" data-wow-delay="1s">Help!</button></a></center>
+		<p id="footer" class="footer-elements wow fadeIn" data-wow-delay="1s">made with ❤️ by @ashutoshbiosyi</p>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
+	<script src="wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
 </body>
 </html>
